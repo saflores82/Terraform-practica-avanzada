@@ -26,7 +26,7 @@ resource "aws_instance" "web" {
   connection {
     type        = "ssh"
     user        = var.ssh_user
-    private_key = file("./module/compute/userdata/${var.ssh_fname}")  # Ruta a tu clave privada
+    private_key = file("./modules/compute/userdata/${var.ssh_fname}")  # Ruta a tu clave privada
     host        = self.public_ip
   }
 }
